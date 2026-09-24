@@ -10,7 +10,7 @@
   const ACTIVE_KEY = "hackaemb.activeId";
   const ACCOUNT_KEY = "hackaemb.account";
   const SESSION_KEY = "hackaemb.session";
-  const RECORDS_API_BASE = "http://127.0.0.1:8001";
+  const RECORDS_API_BASE = "https://hacka-cd.onrender.com";
 
   /* ------------------------------------------------------------------ */
   /* Markdown mínimo — sem dependências, funciona offline                 */

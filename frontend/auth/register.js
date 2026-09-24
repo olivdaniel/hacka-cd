@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_BASE = "http://127.0.0.1:8001";
+  const API_BASE = "https://hacka-cd.onrender.com";
   const form = document.getElementById("registerForm");
   const nameInput = document.getElementById("name");
   const emailInput = document.getElementById("email");

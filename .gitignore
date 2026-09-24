@@ -5,3 +5,13 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .training_docs_manifest.json
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build
+dist/
+frontend/dist/
+
+# Node portátil
+tools/

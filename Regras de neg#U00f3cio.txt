@@ -1,0 +1,10 @@
+Regras de negócio
+Registros novos começam como RASCUNHO.
+Registros novos começam na etapa 1.
+O progresso inicial deve ser calculado pelo servidor.
+O número de NC não pode ser informado pelo cliente.
+Datas devem ser armazenadas em UTC.
+Registros não devem ser apagados fisicamente pela API comum.
+O usuário deve visualizar somente registros autorizados.
+O administrador pode consultar todos os registros.
+Alterações devem atualizar o campo de versão.

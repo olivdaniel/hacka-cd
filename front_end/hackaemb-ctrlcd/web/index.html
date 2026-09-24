@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ctrl + CD &middot; Registro de não conformidades</title>
+    <link rel="icon" href="assets/logo/airplane-logo-icon-blue.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Ctrl + CD: estilos da aplicação de registro (escopo #pageExperiment) -->
+    <link rel="stylesheet" href="ctrlcd/ctrlcd.css" />
+  </head>
+  <body>
+    <!-- Sprite de ícones: substitui os <air-icon> do design system privado. -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style="display: none"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <symbol id="i-panel" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M9 3v18" />
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path
+          d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"
+        />
+        <path d="M8.5 12h.01M12 12h.01M15.5 12h.01" />
+      </symbol>
+      <symbol id="i-message-circle" viewBox="0 0 24 24">
+        <path
+          d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"
+        />
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24">
+        <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+      </symbol>
+      <symbol id="i-flask-conical" viewBox="0 0 24 24">
+        <path d="M10 2v7.31M14 9.3V2M8.5 2h7" />
+        <path d="M14 9.3a6.5 6.5 0 1 1-4 0M5.52 16h12.96" />
+      </symbol>
+      <symbol id="i-bulb" viewBox="0 0 24 24">
+        <path d="M9 18h6M10 22h4" />
+        <path d="M12 2a7 7 0 0 0-4 12.8V17h8v-2.2A7 7 0 0 0 12 2Z" />
+      </symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24">
+        <path
+          d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"
+        />
+      </symbol>
+      <symbol id="i-plane" viewBox="0 0 24 24">
+        <path d="M22 2 11 13" />
+        <path d="M22 2 15 22l-4-9-9-4Z" />
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24">
+        <rect x="9" y="9" width="13" height="13" rx="2" />
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+      </symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24">
+        <path d="M21 2v6h-6" />
+        <path d="M3 12a9 9 0 0 1 15-6.7L21 8" />
+        <path d="M3 22v-6h6" />
+        <path d="M21 12a9 9 0 0 1-15 6.7L3 16" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21-4.35-4.35" />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-folder-plus" viewBox="0 0 24 24">
+        <path
+          d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"
+        />
+        <path d="M12 10v6M9 13h6" />
+      </symbol>
+      <symbol id="i-paperclip" viewBox="0 0 24 24">
+        <path
+          d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"
+        />
+      </symbol>
+      <symbol id="i-at" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" />
+      </symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24">
+        <path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+        <path d="M14 2v6h6" />
+      </symbol>
+      <symbol id="i-link" viewBox="0 0 24 24">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+      </symbol>
+    </svg>
+
+    <div class="app">
+      <!-- ================= Rail esquerdo ================= -->
+      <aside class="rail" id="rail">
+        <div class="rail__panel">
+          <div class="rail__header">
+            <button class="rail__toggle" id="railToggle" aria-label="Alternar barra lateral" aria-expanded="false">
+              <svg class="icon"><use href="#i-panel" /></svg>
+            </button>
+          </div>
+
+          <nav class="rail__nav" aria-label="Navegação principal">
+            <button class="rail__item" data-route="chat" title="Assistente CTRL — conversa">
+              <svg class="icon"><use href="#i-chat" /></svg>
+              <span class="rail__label">Assistente CTRL</span>
+            </button>
+            <button class="rail__item" data-route="hacka">
+              <svg class="icon"><use href="#i-code" /></svg>
+              <span class="rail__label">HackaEmb 2026</span>
+            </button>
+            <button class="rail__item" data-route="experiment" title="Ctrl + CD — Registro de não conformidades">
+              <svg class="icon"><use href="#i-flask-conical" /></svg>
+              <span class="rail__label">Registro de NC</span>
+            </button>
+          </nav>
+
+          <div class="rail__footer">
+            <button class="rail__user" aria-label="Abrir menu do usuário">
+              <span class="avatar" id="userInitials">DH</span>
+              <span class="rail__userinfo">
+                <span class="rail__username" id="userName">DEV HACKAEMB</span>
+                <span class="rail__useremail" id="userEmail">dev@embraer.com.br</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ================= Área central ================= -->
+      <main class="main">
+        <button class="history-toggle" id="historyOpen" aria-label="Expandir barra lateral">
+          <svg class="icon icon--sm"><use href="#i-panel" /></svg>
+        </button>
+
+        <!-- ---------- Página: Chat ---------- -->
+        <section class="page" id="pageChat">
+          <div class="chat">
+            <div class="chat__scroll" id="chatScroll">
+              <div class="welcome" id="welcome">
+                <p class="welcome__greeting">Olá, <span id="greetingName">Ananda Soares</span></p>
+                <h1 class="welcome__title">
+                  Bem-vinda à <span class="welcome__brand">Ctrl + CD</span>
+                </h1>
+                <p class="welcome__subtitle">Orientação objetiva para registrar não conformidades com qualidade, completude e rastreabilidade.</p>
+                <p class="welcome__prompt">Como posso ajudar no seu registro?</p>
+                <div class="welcome__cards">
+                  <button class="welcome__card" data-prompt="Quais são os critérios de vazamento aceitável?">
+                    <svg class="icon"><use href="#i-message-circle" /></svg>
+                    <span class="welcome__cardtext">Quais são os critérios de vazamento aceitável?</span>
+                  </button>
+                  <button class="welcome__card" data-prompt="Como registrar corretamente o AS IS?">
+                    <svg class="icon"><use href="#i-bulb" /></svg>
+                    <span class="welcome__cardtext">Como registrar corretamente o AS IS?</span>
+                  </button>
+                  <button class="welcome__card" data-prompt="Quais fotos são obrigatórias para Vazamento?">
+                    <svg class="icon"><use href="#i-tool" /></svg>
+                    <span class="welcome__cardtext">Quais fotos são obrigatórias para Vazamento?</span>
+                  </button>
+                  <button class="welcome__card" data-prompt="Qual a diferença entre Nota CD e AR?">
+                    <svg class="icon"><use href="#i-plane" /></svg>
+                    <span class="welcome__cardtext">Qual a diferença entre Nota CD e AR?</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="messages is-hidden" id="messages"></div>
+            </div>
+
+            <div class="composer">
+              <div class="composer__box" id="composerBox">
+                <div class="uploads is-hidden" id="uploads"></div>
+
+                <textarea
+                  class="composer__textarea"
+                  id="input"
+                  rows="1"
+                  maxlength="20000"
+                  placeholder="Descreva sua dúvida sobre o registro de não conformidade."
+                  aria-label="Descreva sua dúvida sobre o registro de não conformidade."
+                ></textarea>
+
+                <div class="composer__footer">
+                  <div class="composer__left">
+                    <span class="chip chip--accent">
+                      <svg class="icon icon--sm"><use href="#i-at" /></svg>
+                      Agente:&nbsp;<span class="chip__value" id="agentChip">Ctrl + CD</span>
+                    </span>
+                  </div>
+
+                  <div class="composer__actions">
+                    <button class="composer__iconbtn" id="attachBtn" aria-label="Anexar arquivos" title="Disponível em uma etapa futura" disabled>
+                      <svg class="icon icon--sm"><use href="#i-paperclip" /></svg>
+                    </button>
+                    <button class="composer__send" id="sendBtn" disabled aria-label="Enviar mensagem">
+                      <svg class="icon icon--sm"><use href="#i-plane" /></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="composer__meta">
+                <span class="composer__counter" id="counter">0/20000</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- Página: HackaEmb 2026 ---------- -->
+        <section class="page is-hidden" id="pageHacka">
+          <div class="hacka">
+            <div class="hacka__inner">
+              <h1 class="hacka__title">HackaEmb 2026</h1>
+              <p class="hacka__subtitle">
+                Espaço livre para a sua solução. Edite <code>web/index.html</code>,
+                <code>web/app.js</code> e <code>web/styles.css</code>.
+              </p>
+
+              <!--
+                ==========================================================
+                PONTO DE PARTIDA — construa a sua tela customizada aqui.
+                ==========================================================
+
+                Classes utilitárias já disponíveis em styles.css:
+                  .hacka__inner  → container centralizado (max 900px)
+                  .hacka__slot   → área tracejada de placeholder
+                  .chip          → etiqueta pequena com ícone
+                  .msg__card     → cartão branco com borda
+                  .spinner       → indicador de carregamento
+
+                Ícones: <svg class="icon"><use href="#i-code" /></svg>
+                Veja o sprite no topo deste arquivo para a lista completa.
+
+                Para conversar com o seu agente a partir desta página,
+                use o mesmo cliente de streaming do chat (definido em app.js):
+
+                  await API.streamMessage(
+                    { chatId: null, message: "sua pergunta" },
+                    {
+                      onMetadata: (e) => console.log("chatId:", e.chatId),
+                      onReasoning: (e) => console.log("reasoning:", e.message),
+                      onDelta:    (e) => console.log("token:", e.message),
+                      onComplete: (e) => console.log("fim:", e.sources),
+                      onError:    (e) => console.error(e.detail),
+                    }
+                  );
+
+                Para enviar arquivos para o S3 / S3 Vectors:
+
+                  const res = await API.uploadFiles(fileList, chatId);
+                  // res.results[] → { fileName, status, fileId, errorMessage }
+              -->
+              <div class="hacka__slot" id="hackaSlot">
+                Área reservada para a sua solução.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ---------- Página: Registro de NC (Ctrl + CD) ----------
+             Área #pageExperiment/#experimentSlot usada pela aplicação de
+             registro portada do protótipo Figma (web/ctrlcd/). O conteúdo é
+             renderizado por ctrlcd/app.js. #pageHacka permanece reservada. -->
+        <section class="page is-hidden" id="pageExperiment">
+          <div class="experiment experiment--app">
+            <div class="experiment__slot experiment__slot--app" id="experimentSlot" aria-label="Ctrl + CD — Registro de não conformidades">
+              Carregando o Ctrl + CD…
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ================= Chat history ================= -->
+      <aside class="history is-closed" id="history">
+        <div class="history__header">
+          <h2 class="history__title">Histórico de conversas</h2>
+          <button class="history-toggle" id="historyClose" style="position: static" aria-label="Recolher barra lateral">
+            <svg class="icon icon--sm"><use href="#i-panel" /></svg>
+          </button>
+        </div>
+
+        <button class="history__newchat" id="newChatBtn">
+          Nova conversa
+          <svg class="icon icon--sm"><use href="#i-plus" /></svg>
+        </button>
+
+        <div class="history__search">
+          <svg class="icon icon--sm"><use href="#i-search" /></svg>
+          <input type="search" id="historySearch" placeholder="Pesquisar conversa" aria-label="Pesquisar conversa" />
+        </div>
+
+        <div class="history__folders">
+          Pastas
+          <svg class="icon icon--sm"><use href="#i-folder-plus" /></svg>
+        </div>
+
+        <div class="history__scroll" id="historyList"></div>
+      </aside>
+    </div>
+
+    <input type="file" id="fileInput" multiple hidden />
+    <script src="app.js"></script>
+    <!-- Ctrl + CD: aplicação de registro (sem dependências externas) -->
+    <script src="ctrlcd/ui.js"></script>
+    <script src="ctrlcd/data.js"></script>
+    <script src="ctrlcd/aircraft.js"></script>
+    <script src="ctrlcd/photo-editor.js"></script>
+    <script src="ctrlcd/photo-store.js"></script>
+    <script src="ctrlcd/app.js"></script>
+  </body>
+</html>

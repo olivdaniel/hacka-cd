@@ -1,0 +1,34 @@
+src/
+├── Portal.Api/
+│   ├── Controllers/
+│   ├── Middleware/
+│   ├── Filters/
+│   └── Program.cs
+│
+├── Portal.Application/
+│   ├── Records/
+│   │   ├── Commands/
+│   │   ├── Queries/
+│   │   ├── DTOs/
+│   │   └── Validators/
+│   ├── Attachments/
+│   ├── Workflow/
+│   └── Dashboard/
+│
+├── Portal.Domain/
+│   ├── Entities/
+│   ├── Enums/
+│   ├── Events/
+│   ├── Exceptions/
+│   └── Rules/
+│
+├── Portal.Infrastructure/
+│   ├── Persistence/
+│   ├── Authentication/
+│   ├── Storage/
+│   ├── DocumentGeneration/
+│   └── Notifications/
+│
+└── Portal.Tests/
+    ├── UnitTests/
+    └── IntegrationTests/

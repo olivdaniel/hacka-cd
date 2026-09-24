@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestão de contas · Demo local</title>
+    <link rel="stylesheet" href="management.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">Sistema administrativo separado</p>
+          <h1>Gestão de contas</h1>
+          <p class="subtitle">Crie e administre os usuários que acessam o Portal NC.</p>
+        </div>
+        <a class="portal-link" href="../index.html">Abrir Portal NC</a>
+      </header>
+
+      <section class="notice" role="note">
+        <strong>Demo local.</strong> Os dados ficam somente neste navegador. Esta tela não fornece autenticação ou autorização real.
+      </section>
+
+      <section class="admin-grid" aria-label="Gerenciamento de usuários">
+        <form class="panel create-panel" id="userForm">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Novo acesso</p>
+              <h2>Criar usuário</h2>
+            </div>
+            <span class="panel-mark">+</span>
+          </div>
+          <label>Nome completo<input id="name" required maxlength="80" autocomplete="name" placeholder="Ex.: Marina Analista" /></label>
+          <label>E-mail<input id="email" required type="email" maxlength="120" autocomplete="email" placeholder="voce@empresa.com" /></label>
+          <label>Senha da demo<div class="password-field"><input id="password" required type="password" minlength="8" maxlength="120" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" /><button class="password-toggle" type="button" data-password-target="password" aria-label="Mostrar senha">Mostrar</button></div></label>
+          <label>Confirmar senha<div class="password-field"><input id="passwordConfirmation" required type="password" minlength="8" maxlength="120" autocomplete="new-password" placeholder="Digite a senha novamente" /><button class="password-toggle" type="button" data-password-target="passwordConfirmation" aria-label="Mostrar confirmação da senha">Mostrar</button></div></label>
+          <label>Perfil<select id="role"><option>SOLICITANTE</option><option>ANALISTA</option><option>VERIFICADOR</option><option>APROVADOR</option><option>CONSULTA</option><option>ADMINISTRADOR</option></select></label>
+          <button class="primary-button" type="submit">Criar usuário</button>
+          <p class="form-feedback" id="feedback" role="status"></p>
+        </form>
+
+        <section class="panel users-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Controle de acesso</p>
+              <h2>Usuários cadastrados</h2>
+            </div>
+            <span class="count" id="count">0</span>
+          </div>
+          <div class="users-list" id="usersList" aria-live="polite"></div>
+        </section>
+      </section>
+    </main>
+    <script src="management.js?v=5"></script>
+  </body>
+</html>

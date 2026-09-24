@@ -1,0 +1,263 @@
+--- a/web/index.html
++++ b/web/index.html
+@@ -6,6 +6,8 @@
+     <title>Ctrl + CD &middot; Registro de não conformidades</title>
+     <link rel="icon" href="assets/logo/airplane-logo-icon-blue.svg" />
+     <link rel="stylesheet" href="styles.css" />
++    <!-- Ctrl + CD: estilos da aplicação de registro (escopo #pageExperiment) -->
++    <link rel="stylesheet" href="ctrlcd/ctrlcd.css" />
+   </head>
+   <body>
+     <!-- Sprite de ícones: substitui os <air-icon> do design system privado. -->
+@@ -112,17 +114,17 @@
+           </div>
+ 
+           <nav class="rail__nav" aria-label="Navegação principal">
+-            <button class="rail__item is-active" data-route="chat">
++            <button class="rail__item" data-route="chat" title="Assistente CTRL — conversa">
+               <svg class="icon"><use href="#i-chat" /></svg>
+-              <span class="rail__label">Conversa</span>
++              <span class="rail__label">Assistente CTRL</span>
+             </button>
+             <button class="rail__item" data-route="hacka">
+               <svg class="icon"><use href="#i-code" /></svg>
+               <span class="rail__label">HackaEmb 2026</span>
+             </button>
+-            <button class="rail__item" data-route="experiment">
++            <button class="rail__item" data-route="experiment" title="Ctrl + CD — Registro de não conformidades">
+               <svg class="icon"><use href="#i-flask-conical" /></svg>
+-              <span class="rail__label">Nova solução</span>
++              <span class="rail__label">Registro de NC</span>
+             </button>
+           </nav>
+ 
+@@ -156,21 +158,21 @@
+                 <p class="welcome__subtitle">Orientação objetiva para registrar não conformidades com qualidade, completude e rastreabilidade.</p>
+                 <p class="welcome__prompt">Como posso ajudar no seu registro?</p>
+                 <div class="welcome__cards">
+-                  <button class="welcome__card" data-prompt="Explore insights and general ideas with AI assistance">
++                  <button class="welcome__card" data-prompt="Quais são os critérios de vazamento aceitável?">
+                     <svg class="icon"><use href="#i-message-circle" /></svg>
+-                    <span class="welcome__cardtext">Explore insights and general ideas with AI assistance</span>
++                    <span class="welcome__cardtext">Quais são os critérios de vazamento aceitável?</span>
+                   </button>
+-                  <button class="welcome__card" data-prompt="Ask questions about the documents you uploaded">
++                  <button class="welcome__card" data-prompt="Como registrar corretamente o AS IS?">
+                     <svg class="icon"><use href="#i-bulb" /></svg>
+-                    <span class="welcome__cardtext">Ask questions about the documents you uploaded</span>
++                    <span class="welcome__cardtext">Como registrar corretamente o AS IS?</span>
+                   </button>
+-                  <button class="welcome__card" data-prompt="Test your agent's tools and integrations">
++                  <button class="welcome__card" data-prompt="Quais fotos são obrigatórias para Vazamento?">
+                     <svg class="icon"><use href="#i-tool" /></svg>
+-                    <span class="welcome__cardtext">Test your agent's tools and integrations</span>
++                    <span class="welcome__cardtext">Quais fotos são obrigatórias para Vazamento?</span>
+                   </button>
+-                  <button class="welcome__card" data-prompt="Build your solution for HackaEmb 2026">
++                  <button class="welcome__card" data-prompt="Qual a diferença entre Nota CD e AR?">
+                     <svg class="icon"><use href="#i-plane" /></svg>
+-                    <span class="welcome__cardtext">Build your solution for HackaEmb 2026</span>
++                    <span class="welcome__cardtext">Qual a diferença entre Nota CD e AR?</span>
+                   </button>
+                 </div>
+               </div>
+@@ -268,19 +270,14 @@
+           </div>
+         </section>
+ 
+-        <!-- ---------- Página: Nova solução ---------- -->
++        <!-- ---------- Página: Registro de NC (Ctrl + CD) ----------
++             Área #pageExperiment/#experimentSlot usada pela aplicação de
++             registro portada do protótipo Figma (web/ctrlcd/). O conteúdo é
++             renderizado por ctrlcd/app.js. #pageHacka permanece reservada. -->
+         <section class="page is-hidden" id="pageExperiment">
+-          <div class="experiment">
+-            <div class="experiment__inner">
+-              <h1 class="experiment__title">HackaEmb 2026</h1>
+-              <p class="experiment__subtitle">
+-                Espaço livre para a sua nova solução. Edite <code>web/index.html</code>,
+-                <code>web/app.js</code> e <code>web/styles.css</code>.
+-              </p>
+-
+-              <div class="experiment__slot" id="experimentSlot">
+-                Área reservada para a sua nova solução.
+-              </div>
++          <div class="experiment experiment--app">
++            <div class="experiment__slot experiment__slot--app" id="experimentSlot" aria-label="Ctrl + CD — Registro de não conformidades">
++              Carregando o Ctrl + CD…
+             </div>
+           </div>
+         </section>
+@@ -316,5 +313,11 @@
+ 
+     <input type="file" id="fileInput" multiple hidden />
+     <script src="app.js"></script>
++    <!-- Ctrl + CD: aplicação de registro (sem dependências externas) -->
++    <script src="ctrlcd/ui.js"></script>
++    <script src="ctrlcd/data.js"></script>
++    <script src="ctrlcd/aircraft.js"></script>
++    <script src="ctrlcd/photo-editor.js"></script>
++    <script src="ctrlcd/app.js"></script>
+   </body>
+ </html>
+--- a/web/app.js
++++ b/web/app.js
+@@ -158,16 +158,50 @@
+       };
+     },
+ 
+-    /** Consome text/event-stream e despacha metadata|reasoning|delta|complete|error. */
++    /**
++     * MODO DEMONSTRAÇÃO (Skill 01, Marco 3): resposta simulada, sem rede.
++     * Mantém o contrato público: onMetadata → onDelta → onComplete.
++     * A Skill 02 substituirá somente esta implementação pela chamada ao
++     * servidor Python local, sem alterar sendMessage() nem a interface.
++     */
+     async streamMessage(payload, callbacks = {}, signal) {
+-      if (signal?.aborted) return;
+-      callbacks.onError?.({
+-        type: "error",
+-        detail: {
+-          title: "Modo demonstração",
+-          detail: "A resposta simulada será conectada no Marco 3.",
+-        },
+-      });
++      const wait = (ms) =>
++        new Promise((resolve, reject) => {
++          const timer = setTimeout(resolve, ms);
++          signal?.addEventListener("abort", () => {
++            clearTimeout(timer);
++            reject(new DOMException("Cancelado", "AbortError"));
++          });
++        });
++
++      try {
++        if (signal?.aborted) return;
++        await wait(700);
++        callbacks.onMetadata?.({
++          chatId: payload.chatId || null,
++          title: String(payload.message || "Nova conversa").slice(0, 40),
++        });
++        const answer = [
++          "**Resposta simulada — modo demonstração.**",
++          "",
++          "O Assistente CTRL ainda não está conectado às normas e aos documentos cadastrados. Por isso, não posso responder a esta pergunta com uma referência documental.",
++          "",
++          "> Não localizei essa informação nas normas e nos documentos disponíveis.",
++          "",
++          "Quando a base documental for conectada (Skills 02 a 05), cada resposta trará a norma, o documento, a seção e o link da referência.",
++        ].join("\n");
++        for (const chunk of answer.match(/[^\n]*\n?/g).filter(Boolean)) {
++          await wait(60);
++          callbacks.onDelta?.({ message: chunk });
++        }
++        callbacks.onComplete?.({ sources: [] });
++      } catch (error) {
++        if (error?.name === "AbortError") return;
++        callbacks.onError?.({
++          type: "error",
++          detail: { title: "Modo demonstração", detail: "Falha ao gerar a resposta simulada." },
++        });
++      }
+     },
+   };
+ 
+@@ -302,7 +336,7 @@
+     box.className = "reasoning is-collapsed";
+     box.innerHTML = `
+       <button class="reasoning__toggle" type="button">
+-        ${icon("bulb")}<span>Reasoning</span>${icon("chevron-down", "reasoning__chevron")}
++        ${icon("bulb")}<span>Raciocínio</span>${icon("chevron-down", "reasoning__chevron")}
+       </button>
+       <div class="reasoning__body"></div>`;
+     box.querySelector(".reasoning__body").textContent = content;
+@@ -336,7 +370,8 @@
+ 
+     const copy = document.createElement("button");
+     copy.className = "msg__action";
+-    copy.title = "Copy";
++    copy.title = "Copiar";
++    copy.setAttribute("aria-label", "Copiar resposta");
+     copy.innerHTML = icon("copy");
+     copy.addEventListener("click", () => {
+       navigator.clipboard?.writeText(content);
+@@ -345,7 +380,8 @@
+ 
+     const regenerate = document.createElement("button");
+     regenerate.className = "msg__action";
+-    regenerate.title = "Regenerate";
++    regenerate.title = "Gerar novamente";
++    regenerate.setAttribute("aria-label", "Gerar a resposta novamente");
+     regenerate.innerHTML = icon("refresh");
+     regenerate.addEventListener("click", () => regenerateLast());
+ 
+@@ -376,8 +412,8 @@
+   function groupChats(chats) {
+     const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+     return {
+-      Last: chats.filter((chat) => new Date(chat.updatedAt).getTime() >= cutoff),
+-      Older: chats.filter((chat) => new Date(chat.updatedAt).getTime() < cutoff),
++      "Últimos 7 dias": chats.filter((chat) => new Date(chat.updatedAt).getTime() >= cutoff),
++      "Mais antigas": chats.filter((chat) => new Date(chat.updatedAt).getTime() < cutoff),
+     };
+   }
+ 
+@@ -422,7 +458,8 @@
+ 
+         const remove = document.createElement("button");
+         remove.className = "history__delete";
+-        remove.title = "Delete chat";
++        remove.title = "Excluir conversa";
++        remove.setAttribute("aria-label", `Excluir conversa ${chat.title}`);
+         remove.innerHTML = icon("trash");
+         remove.addEventListener("click", (event) => {
+           event.stopPropagation();
+@@ -470,7 +507,7 @@
+ 
+       const remove = document.createElement("button");
+       remove.className = "upload-chip__remove";
+-      remove.title = "Remove";
++      remove.title = "Remover";
+       remove.innerHTML = icon("x");
+       remove.addEventListener("click", () => {
+         pendingFiles.splice(index, 1);
+@@ -549,7 +586,7 @@
+     streaming = true;
+     const node = el.messages.lastElementChild;
+     const textNode = node.querySelector(".msg__text");
+-    textNode.innerHTML = `<div class="thinking"><span class="spinner"></span>Aguardando modo demonstração</div>`;
++    textNode.innerHTML = `<div class="thinking"><span class="spinner"></span>Consultando (simulação)…</div>`;
+ 
+     const files = pendingFiles.filter((entry) => entry.fileId).map((entry) => entry.fileId);
+ 
+@@ -620,7 +657,7 @@
+     const text = card.querySelector(".msg__text");
+     text.innerHTML = message.content
+       ? Markdown.render(message.content)
+-      : `<div class="thinking"><span class="spinner"></span>Thinking</div>`;
++      : `<div class="thinking"><span class="spinner"></span>Pensando…</div>`;
+     scrollToBottom();
+   }
+ 
+@@ -756,9 +793,21 @@
+     });
+   }
+ 
++  /* Página inicial ao abrir o app. "experiment" = Registro de NC (Ctrl + CD).
++     Use "chat" se precisar validar a Skill 01, que espera abrir no chat.
++     Também é possível forçar pela URL: index.html#registro, #chat ou #hacka. */
++  const DEFAULT_ROUTE = "experiment";
++  const HASH_ROUTES = { registro: "experiment", chat: "chat", assistente: "chat", hacka: "hacka" };
++
++  function initialRoute() {
++    const key = window.location.hash.replace("#", "").toLowerCase();
++    return HASH_ROUTES[key] || DEFAULT_ROUTE;
++  }
++
+   async function init() {
+     Store.load();
+     bindEvents();
++    showPage(initialRoute());
+     renderHistory();
+     renderMessages();
+     updateCounter();

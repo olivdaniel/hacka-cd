@@ -1,0 +1,7 @@
+# Segredos e artefatos locais (nunca versionar)
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.training_docs_manifest.json

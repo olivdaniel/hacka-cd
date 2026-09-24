@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Criar conta · Demo local</title>
+    <link rel="stylesheet" href="auth.css" />
+    <style>
+      .password-field { display: flex; gap: 6px; }
+      .password-field input { min-width: 0; }
+      .password-toggle { width: auto; min-width: 76px; min-height: 42px; margin-top: 0; padding: 0 10px; border: 1px solid #b9d0ef; border-radius: 6px; background: #f7fbff; color: #1457cc; font: inherit; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card" aria-labelledby="registerTitle">
+        <p class="eyebrow">Acesso ao Portal NC</p>
+        <h1 id="registerTitle">Criar nova conta</h1>
+        <p class="auth-copy">O cadastro público cria somente o perfil demonstrativo SOLICITANTE. Perfis administrativos pertencem ao sistema de gestão.</p>
+        <form id="registerForm">
+          <label>Nome completo<input id="name" required maxlength="80" autocomplete="name" placeholder="Ex.: João da Silva" /></label>
+          <label>E-mail<input id="email" type="email" required maxlength="120" autocomplete="email" placeholder="voce@empresa.com" /></label>
+          <label>Senha<div class="password-field"><input id="password" type="password" required minlength="8" maxlength="120" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" /><button class="password-toggle" type="button" data-password-target="password" aria-label="Mostrar senha">Mostrar</button></div></label>
+          <label>Confirmar senha<div class="password-field"><input id="passwordConfirmation" type="password" required minlength="8" maxlength="120" autocomplete="new-password" placeholder="Digite a senha novamente" /><button class="password-toggle" type="button" data-password-target="passwordConfirmation" aria-label="Mostrar confirmação da senha">Mostrar</button></div></label>
+          <button type="submit">Criar conta</button>
+          <p class="feedback" id="feedback" role="alert"></p>
+        </form>
+        <a href="index.html">Voltar para o acesso</a>
+      </section>
+    </main>
+    <script src="register.js?v=3"></script>
+  </body>
+</html>

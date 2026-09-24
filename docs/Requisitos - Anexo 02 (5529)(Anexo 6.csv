@@ -1,0 +1,549 @@
+;"ANEXO 6.2 - INSTRUÇÃO PARA DESCRIÇÃO DA NÃO-CONFORMIDADE
+A descrição da não-conformidade deve conter as seguintes informações:
+1- Informações do Produto não-conforme (Nome, PN, N/S, Lote,OC, Qtde,..);
+2 - Localização da não-conformidade;
+3 - Especificação de Projeto (Valores especificados em desenhos e/ou Normas de Engenharia);
+4 - Detalhamento da não-conformidade (Valores/dimensões encontradas);
+5 - Participantes da Análise Preliminar (Nesse campo deve ser reprotado o nome completo do participante e sua respectiva área de atuação)
+OBS: Válido para todas as Tecnologias (Ex: Usinagem, Interiores, Estruturas, Equipamentos, etc).";;;"Emprego de fotos ou croquis usando o GBI. 
+R = Requerido 
+O = Opcional 
+O(*) = Classificação igual Fornecedor ou não-conformidades entre sites é requerido anexar fotos para problemas que afetam o aspecto visual  e croquis para desvios dimensionais. Em caso de problemas funcionais (exemplo: atrito, vazamento, ruído, etc) anexar vídeo para melhor visualização / entendimento do problema.
+N/A = Não-aplicável ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#;Tipo de Não-Conformidade;"Informações que caracterizam a NC 
+(Deve ser inserido no tópico ""detalhamento da NC"") ";"Norma de Engenharia 
+""NE"" ou procedimento 
+interno ""doc.emb"" quando aplicável. Para fornecedores D&B não utilizar as NEs.";Nota CD Quarentena;"Nota CD 
+(Demais Aplicativos) ";"Nota CD 
+(Retrabalho ou 
+reparo-padrão) ";"Código do Problema 
+(doc.emb 356)";Ações Complementares ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+1;Afundamento / Mossa / Amassamento / Ondulação / Vinco ;"1) Distância em relação aos prendedores adjacentes; 
+2) Distâncias de referências ao local afetado (Somente para 
+área de Usinagem. Estamparia e Trat. Superficial); 
+3) Espessura da região afetada; 
+4) Valor de (H x L) encontrado; 
+";"NE07-038 
+ NE03-071 
+ NE03-063 
+ NE03-007";O(*) ;R;O(*) ;CPROB06-0005 ;Reportar se é previsto calço em Projeto na região afetada;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+2;Ajuste excessivo ;"1) Dimensão do dano: Largura de material removido e 
+Comprimento da área afetada; 
+2) Distância de borda, caso a região obter furos; 
+3) Diâmetro do furo (Quando aplicável); 
+4) Reportar se haverá problemas nas próximas 
+montagem (Informação opcional) - Socilitar apoio do 
+processo local.";"NE 20-038 
+(Item 9.10) ";O(*) ;R;O(*) ;"CPROB04 
+(Dimensões e Medidas) 
+ou CPROB11 (Montagem)";N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+3;Assimetria ;1) Informar o valor atual com os dados da planilha.;"NE02-046 
+NE02-044";O(*) ;R;O;CPROB03-0005 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+4;Atualização (up grade) de Equipamento ;"1) Incluir número da Ordem de Engenharia (OE) e responsável pela evolução (up-grade) do equipamento/produto;
+2) Informar PN e SN contidos na OP ou OM sendo pago;
+3) Informar TSN e CSN da peça removida (se aplicado);
+4) Informar para qual o PN será atualizado.
+5) Informar o solicitante (Ex: EMBRAER ou fornecedor).";N/A ;O(*) ;O;N/A;CPROB03-0055;Utilizar o APLIC009 e definição de CTO conforme solicitante.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+5;Cablagem sem continuidade e/ou isolacao / ligação invertida ;"1) Informar sigla do conector ou do componente afetado.
+2) Incluir  Foto do contato/ Prensagem                                                                                 3) Informar pino ou n° do fio.
+4) Verificar Ponto a Ponto
+
+Ex.: Conector P1000, Pino 10
+Ex.: Conector P1000, Fio W202-02248-22";"NE07-038 
+ NE03-071 
+ NE03-063 
+ NE03-007";O;R;R;CPROB01-0030 ;"Informar o PN e LOTE da Cablagem afetada
+Obrigatório emprego de fotos
+
+";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+6;Canibalização ;2) Incluir  Foto do contato/ Prensagem                                                                                 3) Informar pino ou n° do fio.;N/A ;O(*) ;R;O;"CPROB03-0015 
+";N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+7;Clad afetado ;4) Verificar Ponto a Ponto;N/A ;O(*) ;R;O;CPROB19-0055 ;"No ambiente de fabricação: Material Composto, Usinagem, Estamparia e Trat. Superfície, devem ser informados no campo ""Detalhamento da Não-Conformidade"": a) Causa da não-conformidade (Ex.: lixamento para eliminar risco, marcas, etc.)
+Informar tipo da marca (Ex: Marca gerada por impacto de ferramento com remoção de material)";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+8;Componente solto (FOE);;N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+9;Comprimento / Largura / Altura (Dimensional);"1) Informar medida da cablagem ou da ramificação com comprimento incorreto.*
+2) Informar medida de projeto da cablagem. (Avaliar DI de Instalação X DMU de fabricação)*
+*especifico para Fabricação da Cablagem
+";"Doc.Emb 3829
+NE80-076";O;R;O;CPROB04-0010 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+10;Falta torque ou torque solto;"1) Informar sigla do conector.
+2) Informar detalhes da etapa e local onde foi encontrado a falta de torque conector (Exemplo: recebimento, produção, equipagem, entrega, etc.);
+3)  Evidenciar com foto o posicionador do torque desalinhado";Doc.Emb 3824;R;R;R;CPROB01-0010 ;Evidenciar o indicador de torque  branco desalinhado ou a falta do lacre e evidenciar se o componente está instalado.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+11;Componentes  danificados;"1) Informar detalhes da etapa e local onde foi encontrado o dano do conector (Exemplo: recebimento, produção, equipagem, entrega, etc.);
+2) Informar sigla elétrica do conector;*
+3) Informar a data de manufatura ou o lote, caso o SN não seja aplicável ao PN;
+4) Identificar se conector já foi montado previamente ou não antes da detecção da falha;
+5) Anexar fotos dos pinos ou cavidades do conector danificado, indicando a região afetada;
+6) Evidenciar através de fotos que não existe marca de instalação no conector.
+*especifico para Fabricação da Cablagem
+";N/A ;R;R;R;CPROB06-0005 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+12;Configuração não-conforme ;"1) Informar qual a configuração de projeto; (p/n, foto do 
+material); 
+2) Informar qual a configuração atual; (p/n , foto do material); ";N/A ;O;R;O(*) ;CPROB03-0005 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+13;Curto circuito ;"1) Sigla do componente e LOTE do Modulo ou Cablagem (Ex:conector, modulo, 
+chave, relê, etc); 
+2) Informar se o fio está danificado (esmagado, 
+cortado, etc);";N/A ;R;R;R;CPROB08-0015 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+14;Degrau ;"1) Especificação de Projeto;
+2) Valor do degrau encontrado; 
+3) Dimensionamento da região discrepante (Ex: comprimento X Largura etc);
+4) Localização do defeito;
+5) Espessura adjacente;
+6) Caso existir furos de fixação, reportar o diâmetro dos mesmos, 
+7) Prendedor de projeto e passo e bordas mínimas;
+8) Informar se na região do degrau existe próxima montagem;";"NE03-071 
+NE 20-038 
+ (Item 8.2) 
+NE03-063 
+NE03-007
+";R;R;R;CPROB11-0010 ;"No ambiente de fabricação: Material Composto, Usinagem, Estamparia e Trat. Superfície, devem ser informados no campo ""Detalhamento da Não-Conformidade"": 
+1) A causa do degrau; (Ex.: Excesso/ falta de resina, excesso/falta de camada, excesso/falta de compactação das camadas,..);
+2) Reportar se haverá problemas na próxima montagem (Informação opcional) - Solicitar apoio do Sustaining local.
+3) Reportar se afeta superfície aerodinâmica (se sim, utilizar convenção dos sinais da norma do respectivo programa)";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+15;Delaminação ;"1) Dimensionar o local delaminado (comprimento x largura); 
+2) Relatar o motivo da delaminação; 
+3) Espessura do local;
+4) Informar prendedores, passo e borda caso necessário;
+5) Número de camadas afetadas (Nota: Se usado ensaios NDT deve ser informado a profundidade do dano)*;
+6)  Localização da delaminação (Interno ou Externo na peça)*;
+7) Mapeamento próxima montagem*
+* Aplicavel No ambiente de fabricação: Material Composto
+";"NE 20-038
+ NE 07-11
+NE 20-032
+(Composto)";R;R;R;CPROB06-0020 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+16;Desalinhamento / Deslocamento / Posicionamento incorreto ;"1) Especificar qual o desalinhamento encontrado (entre quais peças, informando o PN);
+2) Incluir foto indicando o desalinhamento, com o dimensional encontrado, comparando com a especificação;
+3) Em caso de furo, valor do deslocamento;
+4) Distância de borda (se aplicável);
+5) Diâmetro do furo (se aplicável);
+6) Reportar se haverá problemas nas próximas montagens (opcional) - Socilitar apoio a Eng. Manufatura local.";N/A ;O(*) ;R;O(*) ;CPR0B11-0015 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+17;Descascamento (Pintura);"1) Dimensionar o local com pintura descascada (comprimento x largura); 
+";"Doc.EMB 1755 
+(Tabela 5) ";O(*) ;R;O(*) ;CPROB13-0040 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+18;Descolamento ;"1) Dimensão do dano: Largura x Comprimento
+2) Onde ocorreu o descolamento (Ex.: Colméia/Colméia; Colméia/Laminado; entre outros);
+3) Informar o método utilizado na detecção (Ex.: visual, ultra-som e tap test).
+4) Informar posição de projeto e valor do deslocamento/desalimhamento tal como o sentido do deslocamento;
+5) Para casos de posição é preciso avaliar a proxima montagem pois este deslocamento pode gerar atrito ou GAP acima do especificado;
+6) Para estes casos é necessário avaliar possíveis impactos na próxima montagem Ex: borda, afeta furação ou instalação de outro produto
+7) Borda informar borda de projeto e valor encontrado, verificar próxima montagem caso seja identificada furação reportar diâmetro do furos, quantidade de furos afetados e prendedores de projeto;
+";"NE 20-038 
+(Item 8.6)";R;R;R;"CPROB06-0025 
+";Obrigatório Emprego de Fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+19;Diâmetro incorreto ;"1) Valor do furo conforme projeto; 
+2) Valor do furo encontrado (realizar medição em 03 pontos e no comprimento do furo, indicando ovalização / conicidade); 
+3) Distância de passo e borda;
+4) Prendedor de projeto; 
+5) Espessura do revestimento (quando aplicável);
+6) Avaliar e reportar  próxima montagem (folga ou excesso de material)*;
+* Aplicavél para composto";"NE03-006 
+NE03-071 
+NE03-063 
+NE03-007";O(*) ;R;O(*) ;CPROB09-0035 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+20;Empenamento ;"1) Valor do gap encontrado; 
+2) Dimensionamento da região discrepante (comprimento); 
+3) Reportar os desvios a cada 250mm.; verificando os desvios 
+com peso e sem peso.";"NE03-071 
+NE03-063 
+NE03-007";O(*) ;R;O(*) ;CPROB11-0025 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+21;Entradas de ferramenta (usinagem);"1) Dimensão do dano: Comprimento x Largura x 
+Profundidade; 
+2) Distância do dano em relação ao furo mais próximo (se aplicável); 
+3) Distância de passo e borda (se aplicável); 
+4) Reportar se haverá problemas nas próximas montagens (opcional) - Socilitar apoio a Eng. Manufatura local.";"NE 20-038 
+(Item 8.7)";O(*) ;R;O(*) ;CPROB06-0045 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+22;Escareado indevido ;"1) Ø do Escareado; 
+2) Altura do corpo cilíndrico; 
+3) Produndidade do escareado; 
+4) PN do prendedor de projeto (completo); 
+5) Distância de passo e borda; 
+6) Espessura do local (em caso de revestimento). ";"NE03-006 
+NE03-071 
+NE03-063 
+NE03-007";O(*) ;R;O(*) ;CPROB09-0040 ;Diâmetro do furo;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+23;Esmagamento de Colméia ;"1) Dimensões do dano (comprimento x largura); 
+2) Distância do dano em relação a borda da peça; 
+3) Reportar causa do dano (Opcional);";"NE 20-038 
+(Item 8.10)";O(*) ;R;O(*) ;CPROB02-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+24;Falta de componentes no kit de instalação;"1) Reportar em que momento a falta do componente foi identificada;
+2) Recebimento / Produção: Verificar embalagem do fornecedor para ver se componente está no seu interior;
+3) Produção: Verificar forma de pagamento (em caixa; em formato de kit, etc);
+4) Produção: Verificar se PI no recebimento solicita a verificação do Kit. ";N/A;R;R;R;CPROB06-0005 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+25;Falta de documentação;"1) Informar número da Invoice;
+2) Informar quantidade de caixas/pallets se referem a Invoice;
+3) Reportar condições da caixa, embalagem e material de proteção (foto).
+4) Informar se a documentação faltante foi verificada em todas as caixas recebidas pela mesma Invoice.
+Exemplo: Envio parcial de caixas da mesma Invoice para o estoque.";N/A;O(*) ;R;O(*) ;CPROB06-0005 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+26;Falta de metalização;"1) Reportar o valor em miliohms;
+2) Reportar se a metalização foi executada corretamente; ";N/A ;O(*) ;N/A ;O(*) ;CPROB11-0060 ;Reportar valor de projeto;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+27;Fio com crimpagem errada solto ou rompido;"1) Reportar ""excesso de canela""; 
+2) Reportar se está crimpado sobre a isolação;
+3) Informar nº do fio, conector e pino
+
+";N/A ;R;R;R;CPROB01-0020;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+28;Folga ;"1) Especificação de Projeto;
+2) Valor do gap encontrado;
+3) Dimensionamento da região discrepante (comprimento);
+4) Localização do defeito;
+5) Incluir foto indicando o problema, com as dimensões discrepantes;
+6) Caso existir furos de fixação, reportar o diâmetro dos 
+mesmos, o prendedor de projeto e passo e borda minima.";"NE02-044 
+NE20-038 
+(Item 9.2)";O(*) ;R;O(*) ;"CPROB11-0040 
+";Reportar se é previsto calço na região;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+29;Freno incorreto;"1) Informar se é freno ou cabo de segurança;
+2) Informar o sentido do freno;
+3) Informar se o freno ou cabo passou pelos furos do parafuso;
+4) Informar se o freno ou cabo está frouxo / tensionado;
+5) Inserir fotos do freno incorreto.";"Doc.Emb 3824
+(Cablagem)";O;R;R;CPROB01-0030 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+30;"Furo com marcas na parede interna.
+(Instalação de bucha) ";"1) Valor do furo conforme projeto; 
+2) Diâmetro do furo ovalizado (valores minímo e máximo 
+encontrado em tres direções radiais). Peças com grandes espessuras medir o furo em três profundidades (+) a profundidade da marca (utilizar molde ORANWASH);
+2) Informar os PN’s afetado e a espessura de cada peça, 
+conforme GBI;
+3) Informar extenção do pacote total (Medição com paquímetro);
+4) Distância em relação aos prendedores adjacentes;
+5) Distâncias de referências ao local afetado (raio de 
+concordância ou montagem adjacente que possa 
+comprometer a instalação das buchas);
+7) Distância de passo e borda;
+8) Prendedor de projeto;
+9) Perpendicularidade do furo (em graus);
+10) Caso necessitar, fazer observação para medição da espessura das peças por ultra-som.";"NE03-006 
+NE03-071 
+NE03-063 
+NE03-007 ";O(*) ;R;O(*) ;CPR0B09-0065 ;Se o revestimento for afetado, incluir uma foto ou ilustração do CATIA com localização precisa do furo afetado pela região externa, com informação de Nervura, caverna, etc.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+31;Furo inclinado ;"1) Diâmetro do furo; 
+2) Distância de passo e borda; 
+3) Espessura do local (Em caso de revest.); 
+4) Perpendicularidade do furo (Graus); ";NE03-006 ;O(*) ;R;O(*) ;CPROB09-0015 ;"Se o revestimento for afetado, incluir uma foto ou ilustração do CATIA com localização precisa do furo afetado pela região externa, com informação de Nervura, caverna, etc. 
+
+Prendedor de Projeto
+Diâmetro de Projeto
+Distância do raio (se aplicável)";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+32;Furo indevido ;"1) Diâmetro do furo; 
+2) Distância de passo em relação ao próximo furo de projeto; 
+3) Distância de borda; 
++C40
+4) Reportar se haverá problemas nas próximas 
+montagens (Informação opcional) - Socilitar apoio da Engenharia de Manufatura local.";"NE 20-038 
+(Item 8.5)";O(*) ;R;O(*) ;CPROB09-0045 ;"Se o revestimento for afetado, incluir uma foto ou ilustração do CATIA com localização precisa do furo afetado pela região externa, com informação de Nervura, caverna, etc. 
+
+Distância do raio (se aplicável)
+Furo passante  / não passante (junta)
+Prendedores adjacentes (Se aplicável)";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+33;Furo Ovalizado/Com Diametro Incorreto ;"1) Dâmetro do furo conforme projeto; 
+2) Diâmetro do furo ovalizado (valores minímo e máximo 
+encontrado em tres direções radiais). Peças com grandes espessuras medir o furo em três profundidades; 
+3) PN / Cód. Embraer do prendedor de projeto; 
+4) Distância de passo e borda; 
+5) Espessura do revestimento (quando aplicável);
+6) Reportar se haverá problemas nas próximas montagens (opcional) - Socilitar apoio a Eng. Manufatura local.";"NE03-006 
+NE03-071 
+NE03-063 
+NE03-007
+";O(*) ;R;O(*) ;CPROB09-0010 ;"Se o revestimento for afetado, incluir uma foto ou ilustração do CATIA 
+com localização precisa do furo afetado pela região externa, com informação de Nervura, caverna, etc. ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+34;"Furos »» Desalinhamento/Deslocamento/ 
+Posicionamento incorreto (Foco:Usinagem)";"1) Fase de fabricação que foi detectada a não-conformidade; 
+2) Reportar desvios através de relatórios de Inspeção - 
+Socilitar apoio da área Inspeção Tridimensional; 
+3) Reportar desvios através dos valores encontrados X valores 
+de Projeto.
+4) Reportar se haverá problemas nas próximas 
+montagens (Informação opcional) - Socilitar apoio ao 
+processista local)";"NE03-071 
+NE03-063 
+NE03-007";O(*) ;R;O(*) ;CPR0B09-0055 ;"Reportar distância de Passo
+Distância do raio (se aplicável)
+Prendedor de Projeto (se aplicável)";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+35;Guia do conector rotacionado ;"1) Informar sigla do conector.
+2) Informar posição atual do guia em horas.
+3) Informar especificação do projeto da cablagem.";"Doc.Emb 3824
+NE80-076";R;R;R;CPROB01-0015;"Obrigatório emprego de fotos
+Posição da Guia atual x Posição de Projeto
+PN da Cablagem";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+36;Impossibilidade de Montagem;"1) Informar o procedimento de montagem;
+2) Informar as peças envolvidas no processo de montagem (PN / SN para cada uma das peças envolvidas);
+3) Incluir um vídeo mostrando a tentativa de montagem das peças;
+4) Informar se houve uma tentativa de realizar a montagem com peças diferentes.
+
+";N/A ;O;R;R;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+37;Infiltração Química ;"2) Informar as peças envolvidas no processo de montagem (PN / SN para cada uma das peças envolvidas);";"NE 41-013 
+NE 03-074 
+NE 03-080 ";O(*) ;R;O(*) ;CPROB13-0075;"No ambiente de fabricação: Material Composto, Usinagem, Estamparia e Trat. Superfície, devem ser informados no campo ""Detalhamento da Não-Conformidade"": 
+1) Informar a causa da infiltração (Ex.: Bolhas no mask, batidas no mask).";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+38;Insertos deslocados ;"3) Incluir um vídeo mostrando a tentativa de montagem das peças;";"NE 20-038 
+(Item 8.12)";O(*) ;R;O(*) ;"CPROB02-0050
+";N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+39;"Inspeção de Recebimento
+Informação Divergente (Documentação e Sistema)";4) Informar se houve uma tentativa de realizar a montagem com peças diferentes.;N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+40;Inspeções não-destrutivas (Imperfeições internas: Vazios, pontes em raios, corpo estranho, etc);"1) Extensão do dano: largura X comprimento, profundidade da 
+área afetada, etc.";"NE 20-032 
+(Item 5.3.7.3) ";O(*) ;R;O;"CPROB02 
+(Ver relação) 
+CPROB06 
+(Ver relação)";Informar tipo de inspeção realizada (ex. Liquido penetrante);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+41;Interferência (Atrito);"1) Descrever localização clara do local afetado, incluindo PN e SN das peças envolvidas.
+Exemplo: fechadura da porta, conexões de tubos, flaps, etc;
+2) Descrever momento quando interferência ocorre
+Exemplo: Fricção entre o trinco e o marco da porta quando momento do fechamento da porta; Conexões de tubos não se encaixam; Atrito no momento de acionamento do flap, etc;
+3) Informar dimensional especificado e encontrado da região com interferência e da peça que causa interferência;
+4) Distância de passo e borda (se aplicável); 
+5) Informar se existe prendedores afetados (se aplicável); 
+6) Incluir vídeo mostrando a interferência reportada.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+42;Linha de Sistema ;"1) Reportar desvios através de relatórios de Inspeção - 
+Socilitar apoio da área Inspeção Tridimensional. 
+";"NE03-071 
+NE03-063 
+ NE03-007";O(*) ;O;O(*) ;CPROB18-0040;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+43;Marca de ferramenta ;"1) Distância em relação aos prendedores adjacentes (se 
+aplicável);
+2) Espessura da região afetada;
+3) Dimensões (Profundidade, comprimento e largura);
+4) Informar se o clad está afetado.";"NE 07-038 
+NE 20-038 
+(Item 8.5)
+";O(*) ;R;O(*) ;CPROB13-0095;"No ambiente de fabricação: Material Composto, Usinagem, Estamparia e Trat. Superfície, devem ser informados no campo ""Detalhamento da Não-Conformidade"": 
+1) Dimensões da marca e Profundidade (Número de camadas);
+2) Distância de passo em relação ao próximo furo de projeto;
+3) Distância de borda;
+4) Reportar se haverá problemas na próxima montagem (Informação opcional) - Solicitar apoio do Sustaining local.
+5) Número de camadas afetadas (Nota: Se usado ensaios NDT deve ser informado a profundidade do dano).
+Tipo de marca (com remoção ou sem remoção de material)
+Impacto ou fricção (se souber a origem)";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+44;"Material Quebrado/Danificado
+(antes da montagem no ambiente produtivo)";"1) Anexar fotos do processo de logística evidenciando o transporte das mesmas, desde o AS (ambiente sincronizador) e célula de preparação até o ambiente de montagem.
+Exemplos: tubos flexíveis com danos na montagem que são verificados no recebimento, mas que podem ser danificados entre etapas de trasnporte interno, etc;
+2) Informar o estado atual,  incluindo foto do material e dimensional;
+3) Informar o motivo da quebra do material com evidências.
+Exemplo: Material pesado sobre o outro, armanezamento inadequado, etc.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+45;Metalização Faltando/Incorreta (fabricação);"1) Relatar como deveria ser realizada a metalização (especificação de projeto X encontrado);";N/A;O(*) ;R;O(*) ;CPROB11-0060 ;"No ambiente de fabricação: Material Composto, Usinagem, Estamparia e Trat. Superfície, devem ser informados no campo ""Detalhamento da Não-Conformidade""a causa da não-conformidade";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+46;Metalização Incorreta (valores fora do especificado);"1) Indicar os pontos de medição (incluir fotos ou desenho esquemático mostrando os pontos usados para medição da metalização);
+2) Informar valores limites de metalização permitidos (incluir número da NE ou o procedimento do fornecedor com o devido requisito);
+3) Informar valor encontrado durante o procedimento de metalização.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+47;Pino de conector baixo / danificado / faltando / sem sealing plug / sem travamento;"1) Sigla do conector; 
+2) Cavidade do conector; 
+3) Reportar o PN, qtde de pinos sem travar";N/A;R;R;R;;"Obrigatório emprego de fotos
+Informar o PN da cablagem";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+48;Porca travada;1) Informar se porca foi testada manualmente antes de ser montada no sistema com ferramental de aperto;N/A;O(*) ;R;O(*) ;;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+49;Porosidade ;"1) Reportar dimensões do dano (largura, comprimento e profundidade);
+2) Em casos onde é usado o processo NDT, informar o valor em Db, conforme NE 07-011.
+3) Espessura adjacente
+4) Mapeamento próxima montagem";"NE 20-032 
+(tabela 5) 
+NE 07-011 ";R;R;R;CPROB06-0075 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+50;"Prendedores em desacordo com 
+projeto/ cravação incorreta ";"1) Prendedor instalado no local; 
+2) Distância de passo e borda (Mínimas).";N/A;O(*) ;R;O(*) ;CPROB14-0050 ;Informar o predendor de projeto;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+51;"Printer Fault, Printer Faulted, Printer Inoperative,  Printer falt message at EICAS, printer fault light ""ON"", printer fault message on CAS, printer lan fault message on CAS, printer fault light on EICAS";"1) Anexar foto da impressão de autotest da impressora;
+2) Anexar foto da impressora instalada e energizada;
+3) Anexar foto do EICAS para status da impressora (Vermelho ou Verde);
+4) Anexar foto do CAS para diagnostico de mensagens de falha atreladas a impressora.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+52;Recebimento: itens amassados e danificados;"1) Anexar fotos das embalagens interna e externa evidenciando se há algum dano na caixa;
+2) Anexar fotos demonstrando todas as indicações de manuseio existentes (empilhamento, orientação da caixa, fragilidade,etc.), tanto da caixa principal, como também das embalagens individualizadas, caso haja.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+53;"Redução de espessura 
+(Foco:Usinagem)";"1) Causa da não-conformidade;
+2) Dimensão da região afetada: Comprimento x Largura;
+3) Verificação de pontos medidos a cada 10mm se for uma área pequena ou aplicar distância de pontos maiores caso a variação de espessura não seja tão significativa.";"NE03-071 
+NE03-063 
+NE03-007
+";O(*) ;R;O(*) ;"CPROB04-0020 
+";N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+54;Risco;"1) Informar detalhes da especificação do produto quanto a riscos, tais como a norma de referência usada (se aplicável);
+2) Informar onde o risco foi detectado (exemplo: recebimento, equipagem, entrega, etc.);
+3) Informar dimensões do risco: comprimento, largura e profundidade (para riscos superficiais onde não é possível medir a profundidade, informar esta condição);
+4) Informar a espessura do material ou chapa danificado 
+(se for revestimento informar também a tolerância de projeto); 
+5) Informar a distância e condição de iluminação em que os problemas foram inspecionados / detectados;
+6) Informar se o tratamento superficial foi afetado (exemplo: verificação por meio de teste de passagem de corrente, utilizando o multímetro);
+7) Efetuar teste clad (se necessário);
+8) Reportar se a fibra não está exposta ou danificada (Em caso 
+de material composto);
+9) Anexar fotos do risco mostrando região afetada na peça (com dimensões explícitas nas fotos).";"NE07-038 
+NE 20-038 
+ (Item 9.5.2) 
+NE20-032 
+NE03-071 
+NE03-063 
+NE03-007";O(*) ;R;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+55;"Rompimento de Camadas 
+(Trincas) ";"1) Dimensão do dano: Comprimento x Largura; 
+2) Número de camadas afetadas (Nota: Se usado ensaios NDT 
+deve ser informado a profundidade do dano); 
+3) Reportar se o dano está relacionado a montagem de 
+chapas e/ou telas de metalização. ";"NE 20-038 
+(Item 8.1)";O(*) ;R;O(*) ;CPROB06-0085 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+56;Rugas nas camadas;;"NE 20-032 
+(tabela 5) ";R;R;R;CPROB13-0060 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+57;Ruído;"1) Informar a especificação do critério de ruído exigido ou se trata de uma anomalia percebida pelo operador devido a sua experiência de montagem para peças similares;
+2) Evidênciar através de vídeo o ruído detectado, mostrando o funcionamento da peça);
+3) Evidênciar através de vídeo o funcionamento de peça sem o ruído para efeitos comparativos;
+4) Informar se o ruído é proveniente da inspeção / reclamação de cliente.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+58;"Sistema Operando fora do Especificado 
+(Mensagem de Falha)
+Nota: Referência o DOC.EMB 3916.";"1) Informar se peça apresenta mensagem de falha durante primeiro power on do equipamento, a fim de evidenciar que ela não foi previamente eletronicamente testada na Embraer (informar TSN e CSN se disponível);
+2) Reportar qual teste / atividade estava sendo executada no momento da falha;
+3) Reportar texto da mensagem de falha exibida (incluir foto);
+4) Reportar código da mensagem de falha (incluir foto).
+Nota: uma mesma mensagem de falha pode ser trigada por diferentes códigos de falha no CMC;
+5) Anexar foto do display (obrigatório) onde é indicada a mensagem de falha e da página de manutenção (se disponível);
+6) Indicar se mensagem é contínua ou intermitente (caso seja intermitente, indicar o tempo da intermitência ou período aproximado de sua duração e a situação em que ela foi trigada);
+7) Especificar se o FIM foi realizado e, em caso positivo, indicar qual o código do FIM;
+8) Reportar se foi realizada a medição ponto-a-ponto;
+9) Reportar se conectores que têm ligação direta com o sistema da peça falhada foram desconectados, checados e reconectados;
+10) Reportar se PBIT e IBIT foram realizados anteriormente a realização do swap / troca da peça julgada não-conforme;
+11) Em caso de erro de carregamento de software informar o PN do programa instalado, a mensagem de falha e se o novo software foi disponibilizado pela Engenharia Embraer.
+12) Informar se a mensagem aparece durante vôo ou teste de solo.
+- Para mensagens de falha reportadas em testes no solo é importante também anexar download dos dados da aeronave (CMC, FHDB e outros).
+- Para mensagens de falha reportadas em testes no voo é importante também informar qual a condição de voo ocorreu a pane como por exemplo decolagem, subida, cruzeiro, descida, pouso, etc. Anexar flight data e informação do CMC.";DOC.EMB 3196;R;R;R;CPROB01-0030 ;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+59;SN Duplicado Recebido;"1) Informar PN e SN duplicado;
+2) Informar PO e linha de ambos os materiais recebidos juntamente com as respectivas datas de recebimento;
+3) Incluir foto da Invoice de recebimento da última peça com SN duplicado juntamente com foto da peça física para evidenciar que a Invoice e a peça têm a mesma informação de SN.";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+60;Tempo de Vida / Aferição / Inspeção Periódica / Validade Vencida;"1) Data de fabricação do produto/equipamento;
+Nota: Informar qual a data está sendo usada para comparação (data de fabricação ou data de overhaull, se aplicável).
+2) Incluir informação referente a quanto tempo o material pode ter de tempo de vida (incluir foto de página da DIP com indicação de perecibilidade / preservação / reteste do material);
+3) Incluir data do teste hidrostático (para caso de garrafas de extinção de fogo).";N/A ;O(*) ;N/A ;O(*) ;CPROB01-0030 ;"No estoque (Recebimento) nos casos de testes hidrostáticos no campo especificação de projeto deve ser informado a data do reteste hidrostático;";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+61;"Tratamento Térmico/Superficial 
+Faltando ";1) Relatar a especificação X as condições atuais.;N/A;O(*) ;R;O;CPROB06-0090 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+62;Trinca ;"1) informar condições de projeto;
+2) Dimensionamento da região discrepante (Comprimento) por ensaio de liquido penetrante e relatar condições atuais;
+3) Caso existir furos de fixação, o diâmetro dos mesmos, prendedor de projeto e passo e bordas mínimas.";N/A;O(*) ;R;O(*) ;CPROB06-0095;No ambiente de Usinagem, Estamparia e Trat.Superfície, reportar no campo detalhamento da não-conformidade a causa da não-conformidade.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+63;Vazamento;"1) Informar o critério de vazamento permitido (especificação);
+2) Informar o vazamento mensurado (exemplo: gotas por minuto, queda de pressão em psi / min, etc.);
+3) Informar o tipo de teste executado durante detecção do vazamento (exemplo: bancada, pressurização, flushing);
+4) Informar se o vazamento é no primeiro teste ou ocorreu posteriormente a algum outro teste realizado;
+5) Informar se o vazamento ocorre com o sistema estático (desligado) ou sistema dinâmico (em execução);
+6) Informar o tipo de fluido que está vazando (exemplo: óleo de preservação, óleo hidráulico, combustível, ar, hélio, agua, etc);
+7) Informar método de detecção de vazamento (exemplo: inspeção visual, ruído, solução de detecção de vazamento - LEAK TEC, medidas de decaimento de pressão ao longo do tempo, etc.);
+8) Informar o local do vazamento;
+9) Informar se na área de vazamento há indícios de danos;
+10) Para vazamentos de interface, reportar se a interface entre conectores foi verificada (região limpa e conexões desmontadas e montadas novamente) e se o torque das conexões estão adequados (informar requisito X torque aplicado);
+11) Informar se swap da peça não-conforme foi realizado (caso seja possível);
+12) Anexar vídeo mostrando vazamento (exemplo: formação de bolhas, gotejamento, poça de fluido no chão sendo formada, etc.).";NE 07-024 ;O(*) ;R;O;CPROB06-0090 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+64;Vincos ;"1) Profundidade do vinco; 
+2) Espessura da peça; 
+3) Reportar condições do lado oposto ""peça"" ao vinco.";"NE 20-032 
+(tabela 5)";O(*) ;R;O(*) ;CPROB06-0105 ;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+65;Cablagem - Trançada;1) Informar n° do fio e/ou ramificação trançada.;N/A ;O;R;R;;Evidenciar por meio de fotos a região onde a cablagem está instalada.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+66;Cablagem - Terminal Incorreto;"1) Sigla do GS incorreto
+2) Informar dimensões do Terminal GS que comprometeram a instalação. (diâmetro do furo, diâmetro externo, etc…)";N/A ;R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+67;Cablagem - Ligação invertida;1) Informar entre quais fios e quais conectores (cavidades) a inversão ocorreu.;N/A ;O;O;O;;N/A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+68;Ramificação Incorreta;"1) Valor de projeto especificado  X encontrado com ponto de referência*
+*  Para cablagem Solicitar suporte para análise de DI de instalação X DMU.
+ ";N/A ;R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+68;Identificação Incorreta;"1) Informar identificação incorreta.
+2) Informar qual a identificação deveria ter sido enviada.
+
+";N/A;"Doc.Emb 2817*
+*(Cablagem)";R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+69;Corpo estranho;"1) Dimensões largura e comprimento
+2) Profundidade da  inclusão
+3) Espessuras Adjacente
+4) Mapeamento próxima montagem
+5) Imagem do local afetado no componente e imagem do local afetado
+
+";"NE 07-011
+NE 20-032";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+70;Cura;"1) Número da cura
+2) Valor encontrado
+3) Valor especificado
+4) Nível da peça
+5) Inspeção por ultrassom
+6) Caso tenha ensaio no laboratório necessário aguardar para reportar o resultado";"NE 20-032 
+Doc. Emb 84 ";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+71;Resina Insuficiente/Faltando;"1) Imagem da região afetada e da peça como um todo
+2) Informar se a região afeta aspecto visual, lado acabado ou lado não acabado
+
+";"
+NE 20-032";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+72;Ruptura de Tela;"1) Imagem da região afetada e da peça como um todo;
+2) Dimensão da ruptura comprimento x largura;
+3) Avaliar se exsite cravação proxima a ruptura, passo entre a ruptura e prendedor limitado em no mínimo 25 mm;
+4) Avaliare reportar  possíveis impactos na próxima montagem Ex: borda, afeta furação ou instalação de outro produto
+
+";"
+NE 80-060
+NE 20-032";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+73;Espessura ;"1) Dimensão  largura, comprimento
+2) Espessura encontrada
+3) Espessura de projeto
+4) Informar lay up de camadas na região da espessura fora do especificado
+5) Mapeamento próxima montagem
+";"
+NE 20-032";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+74;"Afundamento / Mossa / Amassamento / Ondulação / Vinco
+(Foco: Composto) ";"1) Dimensão  largura,  comprimento e profundidade
+2) Mapeamento próxima montagem
+
+";"
+NE 20-032";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+75;Tempo de Exposição;"1) Anexar gráfico de cura
+
+";"
+NE 20-032";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+76;Vazios;"1) Dimensão  largura e comprimento;
+2) Profundidade do vazio;
+3) Espessura adjacente;
+4) Mapeamento próxima montagem.
+
+";"
+NE 20-032
+NE 07-011
+";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+77;Núcleo Esmagado / Descolado;"1) Dimensão  largura, comprimento e profundidade
+2) Reportar a avaliação quanto a possíveis impactos na próxima montagem Ex: borda, afeta furação ou instalação de outro produto
+
+";"
+NE 20-032
+
+";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+78;Extração/Desmoldagem (Foco Composto);"1) Dimensão  largura, comprimento e profundidade da Delaminação;
+2) Espessura adjacente;
+3) Reportar a avaliação quanto a possíveis impactos na próxima montagem;
+";"
+NE 20-032
+
+";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+79;Pontes em Chanfros e Raios;"1) Dimensão  largura, comprimento e profundidade; 
+2) Espessura adjacente;
+3) Reportar a avaliação quanto a possíveis impactos na próxima montagem;
+";"
+NE 20-032
+
+";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+80;Fibras Danificadas/Desalinhadas;"1) Dimensão  largura e comprimento:
+2) Avaliar se exsite cravação proxima a ruptura, passo entre a ruptura e prendedor limitado em no mínimo 25 mm 
+
+";"
+NE 20-032
+
+";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+81;Defeito na colagem do inserto/ terital/posicionamento;"1) Orientação Incorreta do Sentido da Fita;
+2) Posicionamento / Orientação de Camada
+
+";"
+NE 20-032
+
+";R;R;R;;Obrigatório emprego de fotos;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+82;Peso;"1) Reportar valor encontrado e valor de projeto;
+2) Avaliar proxima montagem ( condição afeta Balanceamento, ou peso final do produto), informar PN próxima montagem.
+
+";N/A ;O;O;O;;N/A ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+83;Profundidade;"1) Reportar valor encontrado e valor de projeto;
+2)  Avaliar proxima montagem (alojamento), mapear região e  PN próxima montagem.
+
+";N/A ;O;O;O;;N/A ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+84;Forma (Má Conformação, Dobra/Rasgo /Angulo/Chanfro/ Raio);"1) Dobra: Informar condição atual da dobra no produto e condição de projeto; 
+2) Rasgo: Informar rasgo de projeto e rago atual no produto, informar próxima montagem possíveis impactos tais como borda da furação afetada, atrito ou folga;
+3) Ângulo: Informar ângulo de projeto e ângulo atual no produto, informar próxima montagem possíveis impactos tais como borda da furação afetada, atrito ou folga;
+4) Chanfro: Informar dimensão do chanfro atual no produto e condição de projeto, informar próxima montagem possíveis impactos tais como borda da furação afetada, atrito ou folga;
+5) Raio: Informar raio de projeto e raio atual no produto, informar próxima montagem possíveis impactos tais como borda da furação afetada, atrito ou folga.
+";N/A ;O;O;O;;N/A ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+85;Trinca na Camada de Cromo;"1) Informar foto do local, próxima montagem e dimensionamento da trinca
+
+
+";N/A ;O;O;O;;N/A ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

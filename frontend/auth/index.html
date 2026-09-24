@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acesso ao Portal NC · Demo local</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card" aria-labelledby="authTitle">
+        <p class="eyebrow">Ctrl + CD · acesso</p>
+        <h1 id="authTitle">Entrar no Portal NC</h1>
+        <p class="auth-copy">Use uma conta criada no sistema de gerenciamento. Esta autenticação funciona somente nesta demonstração local.</p>
+        <p class="auth-copy"><strong>Administrador demo:</strong> admin.demo@example.com · senha: admin123</p>
+        <form id="loginForm">
+          <label>E-mail<input id="email" type="email" required autocomplete="email" placeholder="voce@empresa.com" /></label>
+          <label>Senha<input id="password" type="password" required autocomplete="current-password" placeholder="Sua senha" /></label>
+          <button type="submit">Entrar</button>
+          <p class="feedback" id="feedback" role="alert"></p>
+        </form>
+        <a href="register.html">Criar nova conta</a>
+        <a href="index.html?return=../management/">Acesso administrativo</a>
+      </section>
+    </main>
+    <script src="login.js?v=2"></script>
+  </body>
+</html>

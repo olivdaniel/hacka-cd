@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true, "checkJs": true, "noEmit": true, "strict": true,
+    "noUnusedLocals": true, "noUnusedParameters": true, "noImplicitReturns": true,
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"], "types": [], "skipLibCheck": false
+  },
+  "files": [
+    "../../frontend/ctrlcd/aircraft3d/aircraft3d-types.d.ts",
+    "../../frontend/ctrlcd/aircraft3d/math.js",
+    "../../frontend/ctrlcd/aircraft3d/glb-loader.js",
+    "../../frontend/ctrlcd/aircraft3d/camera-utils.js",
+    "../../frontend/ctrlcd/aircraft3d/renderer.js",
+    "../../frontend/ctrlcd/aircraft3d/orbit-controls.js",
+    "../../frontend/ctrlcd/aircraft3d/view-presets.js",
+    "../../frontend/ctrlcd/aircraft3d/navigation.js",
+    "../../frontend/ctrlcd/aircraft-hierarchy.js",
+    "../../frontend/ctrlcd/aircraft-location.js",
+    "../../frontend/ctrlcd/aircraft3d/regions.js",
+    "../../frontend/ctrlcd/aircraft3d/raycaster.js",
+    "../../frontend/ctrlcd/aircraft3d/selection.js",
+    "../../frontend/ctrlcd/aircraft3d/panels.js",
+    "../../frontend/ctrlcd/aircraft3d/marker.js",
+    "../../frontend/ctrlcd/aircraft3d/viewer.js"
+  ]
+}
